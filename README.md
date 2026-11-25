@@ -35,6 +35,10 @@ pip install -r requirements.txt
 python run_experiment.py --shape cuboid --output outputs/cuboid
 python run_experiment.py --shape cylinder --output outputs/cylinder
 
+# 生成相机投影图、三维场景图和 FIM 特征值图
+python visualize_experiment.py --shape cuboid --output outputs/visualization_cuboid
+python visualize_experiment.py --shape cylinder --output outputs/visualization_cylinder
+
 # 自定义尺寸，单位为米
 python run_experiment.py --shape cuboid --cuboid-size 0.50 0.30 0.40 --output outputs/custom_cuboid
 python run_experiment.py --shape cylinder --cylinder-radius 0.18 --cylinder-height 0.45 --output outputs/custom_cylinder
@@ -47,6 +51,9 @@ python run_experiment.py --shape cylinder --cylinder-radius 0.18 --cylinder-heig
 - `summary.json` 保存采样数量、可见数量、FIM、特征值和有限差分误差。
 - `surface_points.csv` 保存物体坐标系和相机坐标系中的表面采样点、法向量与可见性。
 - `fim.npz` 保存完整可见与遮挡情况下的矩阵和特征分解结果。
+- `camera_view.png` 显示相机成像平面中的可见点和外部遮挡区域。
+- `scene_3d.png` 显示相机坐标系中的物体点、相机和遮挡箱体。
+- `fim_eigenvalues.png` 显示遮挡前后的 FIM 特征值。
 
 ## 坐标约定
 
