@@ -56,3 +56,9 @@ python run_experiment.py --shape cylinder --cylinder-radius 0.18 --cylinder-heig
 - `delta = [delta_tx, delta_ty, delta_tz, delta_wx, delta_wy, delta_wz]`。
 
 当前实现使用点到平面标量观测和固定标量噪声方差。后续接入 RGB-D 图像时，可以把网络或几何拟合模块输出的点、法向量、可见性置信度和噪声替换到同一计算层。
+
+## RGB-D 挤出体基元拟合数据集 v1
+
+本仓库同时发布一份 RGB-D 数据集：200 个案例，包含彩色图、深度图、目标裁剪块、类别标签、包围盒与超椭球拟合参数。说明见 [`datasets/rgbd_extrusion_primitive_fitting_dataset_v1/README.md`](datasets/rgbd_extrusion_primitive_fitting_dataset_v1/README.md)。
+
+原始 ROS bag（200 个文件，约 25.7 GB）托管在 [Release `rgbd-dataset-v1`](https://github.com/e2432/-3d-/releases/tag/rgbd-dataset-v1)。
